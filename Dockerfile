@@ -33,13 +33,12 @@ RUN apk --update add \
     docker-php-ext-enable imagick && \
     docker-php-ext-install gd && \
     docker-php-ext-enable opcache && \
-    pecl install mcrypt-1.0.1 && \
-    docker-php-ext-enable mcrypt && \
     apk del build-base \
     linux-headers \
     libaio-dev \
     && rm -rf /var/cache/apk/*
-
+    
+        
 # Register the COMPOSER_HOME environment variable
 ENV COMPOSER_HOME /composer
 
